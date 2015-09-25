@@ -8,7 +8,7 @@
 # http --form POST http://127.0.0.1:5000 file@somefile.txt
 
 # example of posting a file using curl:
-# curl -F file=@somefile.txt http://nslu2:5000/objects
+# curl -F file=@somefile.txt http://127.0.0.1:5000/objects
 
 import hashlib
 import re
