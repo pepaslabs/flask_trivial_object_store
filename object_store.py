@@ -4,6 +4,12 @@
 # copyright jason pepas, released under the MIT license.
 # see https://github.com/pepaslabs/flask_trivial_object_store
 
+# example of posting a file using HTTPie:
+# http --form POST http://127.0.0.1:5000 file@somefile.txt
+
+# example of posting a file using curl:
+# curl -F file=@somefile.txt http://nslu2:5000/objects
+
 import hashlib
 import re
 import os
@@ -46,4 +52,4 @@ def hash_id_is_sane(hash_id):
     	return False
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run('0.0.0.0', debug=True)
